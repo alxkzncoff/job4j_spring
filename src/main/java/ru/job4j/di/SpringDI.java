@@ -12,5 +12,10 @@ public class SpringDI {
         ui.add("Alex Smith");
         ui.add("John Doe");
         ui.print();
+
+        Store first = context.getBean(Store.class);
+        first.add("Will Smith");
+        Store second = context.getBean(Store.class);
+        second.getAll().forEach(System.out::println);
     }
 }
